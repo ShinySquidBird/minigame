@@ -1,5 +1,5 @@
 # minigame
-Game Title - Game Design Workshop SP24 - Heather DeRuyck
+Fish Food - Game Design Workshop SP24 - Heather DeRuyck
 
 Description: 
   Play as a squid and accumulate points by temporarily stunning fish with ink and then eating them.
