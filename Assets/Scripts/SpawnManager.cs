@@ -4,27 +4,32 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject[] crabPrefabs;
-    private float spawnRangex = 20f;
-    private float spawnPosZ = 20f;
+    public GameObject[] fishPrefabs;
+    private float spawnRangeX = 10f;
+    private float spawnPosZUpper = 4f;
+    private float spawnPosZLower = -2f;
+    private float startDelay = 2f;
+    private float spawnInterval = 3f;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        InvokeRepeating("SpawnRandomFish", startDelay, spawnInterval);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            Vector3 spawnPos = new Vector3(Random.Range(-spawnRangex, spawnRangex), 0, spawnPosZ);
-
-            int crabIndex = Random.Range(0, crabPrefabs.Length);
-            Instantiate(crabPrefabs[crabIndex], spawnPos, crabPrefabs[crabIndex].transform.rotation);
-        }
-
 
     }
+
+    void SpawnRandomFish()
+    {
+        Vector3 spawnPos = new Vector3(-spawnRangeX, 0, Random.Range(spawnPosZLower, spawnPosZUpper));
+
+        int fishIndex = Random.Range(0, fishPrefabs.Length);
+        Instantiate(fishPrefabs[fishIndex], spawnPos, fishPrefabs[fishIndex].transform.rotation);
+
+    }
+
 }
