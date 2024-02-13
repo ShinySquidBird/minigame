@@ -23,7 +23,17 @@ public class MoveMedium : MonoBehaviour
         if (other.gameObject.CompareTag("Ink"))
         {
             speed = 0f;
-            Invoke("ResetSpeed", 3);
+            Invoke("ResetSpeed", 2);
+        }
+
+        if (other.gameObject.CompareTag("Squid"))
+        {
+            if (speed == 0)
+            {
+                Destroy(gameObject);
+                ScoreManager.instance.AddPoints();
+                ScoreManager.instance.AddPoints();
+            }
         }
 
     }

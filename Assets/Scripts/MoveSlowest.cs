@@ -25,7 +25,15 @@ public class MoveSlowest : MonoBehaviour
         {
             speed = 0f;
             Invoke("ResetSpeed", 5);
+        }
 
+        if (other.gameObject.CompareTag("Squid"))
+        {
+            if (speed == 0)
+            {
+                Destroy(gameObject);
+                ScoreManager.instance.AddPoints();
+            }
         }
 
     }

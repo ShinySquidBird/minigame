@@ -24,7 +24,18 @@ public class MoveFast : MonoBehaviour
         if (other.gameObject.CompareTag("Ink"))
         {
             speed = 0f;
-            Invoke("ResetSpeed", 2);
+            Invoke("ResetSpeed", 1);
+        }
+
+        if (other.gameObject.CompareTag("Squid"))
+        {
+            if (speed == 0)
+            {
+                Destroy(gameObject);
+                ScoreManager.instance.AddPoints();
+                ScoreManager.instance.AddPoints();
+                ScoreManager.instance.AddPoints();
+            }
         }
 
     }
