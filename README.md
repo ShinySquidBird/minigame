@@ -2,7 +2,7 @@
 Game Title - Game Design Workshop SP24 - Heather DeRuyck
 
 Description: 
-  Lorem ipsum dolor sit amet consectetur adipiscing elit, sem accumsan tempor molestie egestas netus quis.
+  Play as a squid and accumulate points by temporarily stunning fish with ink and then eating them.
 
 Controls: 
   Lorem ipsum dolor sit amet consectetur adipiscing elit, sem accumsan tempor molestie egestas netus quis.
